@@ -1,0 +1,9 @@
+{
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "base_url": "http://localhost:11434",
+  "num_ctx": 3072,
+  "num_predict": 384,
+  "num_gpu": 24,
+  "timeout": 120
+}

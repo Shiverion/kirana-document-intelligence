@@ -1,0 +1,993 @@
+{
+  "metrics": {
+    "case_count": 20,
+    "answerable_count": 16,
+    "unanswerable_count": 4,
+    "top_k": 5,
+    "retrieval_recall_at_k": 1.0,
+    "retrieval_recall_micro_at_k": 1.0,
+    "all_evidence_at_k": 1.0,
+    "ndcg_at_k": 0.8473052786155338,
+    "atomic_answer_fact_recall": 0.5416666666666666,
+    "citation_page_support_precision_proxy": 0.8181818181818182,
+    "citation_evidence_completeness": 0.4166666666666667,
+    "strict_answer_pass_rate": 0.25,
+    "strict_answer_pass_count": 4,
+    "strict_answer_failure_count": 12,
+    "strict_answer_denominator": 16,
+    "grounded_strict_pass_rate": 0.4,
+    "grounded_strict_pass_count": 8,
+    "grounded_strict_failure_count": 12,
+    "grounded_strict_denominator": 20,
+    "abstention_recall": 1.0,
+    "false_abstention_rate": 0.5,
+    "coverage": 0.4,
+    "selective_error_rate": 0.5,
+    "latency": {
+      "retrieve": {
+        "mean_ms": 8.343064999280614,
+        "median_ms": 7.704649997322122,
+        "p95_ms": 9.59809999767458
+      },
+      "ask_including_internal_retrieval": {
+        "mean_ms": 19792.689744999734,
+        "median_ms": 20054.996299997583,
+        "p95_ms": 39513.02930000384
+      },
+      "case_total": {
+        "mean_ms": 19801.03564500023,
+        "median_ms": 20068.462650000583,
+        "p95_ms": 39520.17049999995
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "K01",
+      "question": "What was Kirana's total revenue for 2025, and in what currency is it reported?",
+      "category": "prose",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        4,
+        12,
+        10,
+        11,
+        1
+      ],
+      "retrieved_evidence_groups": 2,
+      "required_evidence_groups": 2,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 2,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "I could not find document evidence that supports this question.",
+      "citations": [],
+      "mode": "grounding_guard",
+      "diagnostics": {
+        "reason": "No meaningful query terms matched retrieved evidence."
+      },
+      "timing_ms": {
+        "retrieve": 6.970399997953791,
+        "ask_including_internal_retrieval": 6.866300005640369,
+        "case_total": 13.838999999279622
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K02",
+      "question": "What disruption caused Kirana's on-time delivery to dip in Q4 2025, and how did it affect the main southern highway?",
+      "category": "prose",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        6,
+        12,
+        2,
+        5,
+        1
+      ],
+      "retrieved_evidence_groups": 2,
+      "required_evidence_groups": 2,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 2,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "I could not find document evidence that supports this question.",
+      "citations": [],
+      "mode": "grounding_guard",
+      "diagnostics": {
+        "reason": "No meaningful query terms matched retrieved evidence."
+      },
+      "timing_ms": {
+        "retrieve": 7.49550000182353,
+        "ask_including_internal_retrieval": 7.477599996491335,
+        "case_total": 14.976099999330472
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K03",
+      "question": "How many parcels did Kirana deliver in 2025?",
+      "category": "prose",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        6,
+        1,
+        10,
+        12,
+        2
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 1,
+      "citation_pages": [
+        6
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": true,
+      "answer_strict_pass": true,
+      "grounded_strict_pass": true,
+      "answer": "Kirana delivered 41.6 million parcels in 2025.",
+      "citations": [
+        {
+          "page": 6,
+          "quote": "We delivered 41.6 million parcels in 2025.",
+          "source": "text",
+          "evidence_id": "P6-B1-2"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 5.563099999562837,
+        "ask_including_internal_retrieval": 10413.871800003108,
+        "case_total": 10419.437200005632
+      },
+      "retrieval_diagnosis": {
+        "label": "pass"
+      }
+    },
+    {
+      "id": "K04",
+      "question": "What was EBITDA in 2024 according to the financial summary?",
+      "category": "table",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        4,
+        2,
+        9,
+        10,
+        8
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 1,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "The provided evidence does not establish the EBITDA for 2024. While Evidence [P4-B6-7] lists a sequence of three numbers (1,036; 1,186; 1,347) under the heading 'EBITDA', it does not explicitly label which year corresponds to which number, nor does it provide a column header mapping these figures to specific years. Other evidence blocks mention years 2023, 2024, and 2025 in relation to emissions or employee counts, but none definitively link the EBITDA figures to the year 2024.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 6.384699998307042,
+        "ask_including_internal_retrieval": 26979.37720000482,
+        "case_total": 26985.764100005326
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K05",
+      "question": "How much capital expenditure did Kirana report for 2025?",
+      "category": "table",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        4,
+        11,
+        1,
+        12,
+        2
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 1,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "The provided evidence does not establish the amount of capital expenditure reported by Kirana for 2025. While one document mentions a planned capital expenditure of THB 1,050 million for 2026 (EVIDENCE P11-B8-9), and another lists a figure of 610,742,905 without specifying the year or context (EVIDENCE P4-B8-9), there is no explicit statement confirming the capital expenditure amount specifically for the fiscal year 2025. The gap lies in the lack of a direct citation linking a specific capital expenditure figure to the year 2025.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 7.274499999766704,
+        "ask_including_internal_retrieval": 28094.081900002493,
+        "case_total": 28101.360299995576
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K06",
+      "question": "What was the 2025 utilisation rate at the Cibitung cold-chain facility in Bekasi?",
+      "category": "table",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        8,
+        7,
+        2,
+        11,
+        10
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 1,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "The provided evidence does not establish the specific utilisation rate for the Cibitung cold-chain facility in Bekasi for the year 2025. While Evidence [P7-B2-3] states that the facility operated close to full capacity 'for most of the year' and provides a 96% figure from 2019, it does not provide a specific rate for 2025. Additionally, Evidence [P8-B5-6] lists major facilities at 31 December 2025 but does not include Cibitung in this list or provide utilisation data for that date.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 7.153300000936724,
+        "ask_including_internal_retrieval": 26940.602599999693,
+        "case_total": 26947.758700000122
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K07",
+      "question": "What was Da Nang's 2025 warehouse utilisation, and what is the company's rule for putting a site on the consolidation watch list?",
+      "category": "cross_page",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        7,
+        8,
+        1,
+        4,
+        12
+      ],
+      "retrieved_evidence_groups": 3,
+      "required_evidence_groups": 3,
+      "answer_fact_hits": 3,
+      "answer_fact_total": 3,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "The provided evidence does not establish the answer to the question.\n\n1. **Da Nang's 2025 warehouse utilisation**: Evidence [P8-B11-12] lists Da Nang (VN-DNG) with a utilisation of 62%, but this data is explicitly dated '2023'. No other evidence provides utilisation figures for Da Nang in 2025.\n2. **Consolidation watch list rule**: Evidence [P7-B3-4] states that sites remaining below 65% for two consecutive quarters are placed on a consolidation watch list. However, this is a general rule and does not confirm if Da Nang specifically meets or fails this criteria in 2025.\n\nThe gap exists because the document only provides historical (2023) data for Da Nang's utilisation and lacks specific 2025 operational metrics for that location.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 6.165099999634549,
+        "ask_including_internal_retrieval": 45546.690899995156,
+        "case_total": 45552.858999995806
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K08",
+      "question": "How many electric light trucks were in Kirana's Indonesian fleet at the end of 2025?",
+      "category": "table",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        9,
+        11,
+        12,
+        2,
+        1
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 1,
+      "citation_pages": [
+        12,
+        9
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": true,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "Kirana's Indonesian fleet had 218 electric light trucks at the end of 2025.",
+      "citations": [
+        {
+          "page": 12,
+          "quote": "The electric fleet was 218 vehicles at 31 December 2025.",
+          "source": "text",
+          "evidence_id": "P12-B7-8"
+        },
+        {
+          "page": 9,
+          "quote": "Our electric fleet grew from 136 vehicles at the end of 2024 to 218 at the end of 2025, an increase of 82.",
+          "source": "text",
+          "evidence_id": "P9-B7-8"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 19.573099998524413,
+        "ask_including_internal_retrieval": 21204.420800000662,
+        "case_total": 21223.99740000401
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K09",
+      "question": "The CEO letter and the errata give different figures for electric trucks added in 2025. What was the original figure, and which corrected number should an analyst use?",
+      "category": "errata",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        12,
+        11,
+        2,
+        9,
+        3
+      ],
+      "retrieved_evidence_groups": 3,
+      "required_evidence_groups": 3,
+      "answer_fact_hits": 3,
+      "answer_fact_total": 3,
+      "citation_pages": [
+        12,
+        9
+      ],
+      "citation_evidence_groups": 3,
+      "citation_complete": true,
+      "answer_strict_pass": true,
+      "grounded_strict_pass": true,
+      "answer": "The original figure stated in the CEO letter was 96 electric trucks added in 2025. This figure has been corrected to 82, which is the number an analyst should use. The correction is explicitly noted in the errata and confirmed by the Fleet and sustainability section, which states the fleet grew from 136 vehicles at the end of 2024 to 218 at the end of 2025, representing an increase of 82.",
+      "citations": [
+        {
+          "page": 12,
+          "quote": "The Letter from the Chief Executive Officer states that 96 electric trucks were added in 2025. The correct figure is 82, as reported in the Fleet and sustainability section.",
+          "source": "text",
+          "evidence_id": "P12-B7-8"
+        },
+        {
+          "page": 9,
+          "quote": "Our electric fleet grew from 136 vehicles at the end of 2024 to 218 at the end of 2025, an increase of 82.",
+          "source": "text",
+          "evidence_id": "P9-B7-8"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 9.193500001856592,
+        "ask_including_internal_retrieval": 25308.457899998757,
+        "case_total": 25317.653499994776
+      },
+      "retrieval_diagnosis": {
+        "label": "pass"
+      }
+    },
+    {
+      "id": "K10",
+      "question": "What were Kirana's Scope 2 greenhouse gas emissions in 2025?",
+      "category": "table",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        9,
+        1,
+        12,
+        2,
+        3
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 1,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "The provided evidence does not contain the specific greenhouse gas emissions data for Kirana's Scope 2 category in 2025. While Table 4 on page 9 lists Scope 2 emissions figures (14,300; 13,900; 12,100 tCO2e), these values correspond to a different year than 2025, as the document is explicitly titled 'Annual Report 2025' but the emission table appears to reference prior years or lacks explicit year labels matching 2025 in the available text snippets. Additionally, an errata note on page 12 corrects fleet figures for 2025 (from 96 to 82 electric trucks), indicating that data accuracy and corrections are being actively managed within this report, which further suggests reliance on specific, potentially corrected tables not fully detailed in the provided excerpts.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 7.139000001188833,
+        "ask_including_internal_retrieval": 39513.02930000384,
+        "case_total": 39520.17049999995
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K11",
+      "question": "What does FTL stand for in this report?",
+      "category": "glossary",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        12
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 1,
+      "citation_pages": [
+        12
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": true,
+      "answer_strict_pass": true,
+      "grounded_strict_pass": true,
+      "answer": "FTL stands for full truckload.",
+      "citations": [
+        {
+          "page": 12,
+          "quote": "FTL: full truckload.",
+          "source": "text",
+          "evidence_id": "P12-B4-5"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 7.147099997382611,
+        "ask_including_internal_retrieval": 4850.194099999499,
+        "case_total": 4857.3437000013655
+      },
+      "retrieval_diagnosis": {
+        "label": "pass"
+      }
+    },
+    {
+      "id": "K12",
+      "question": "For Indonesia, what were Kirana's year-end 2025 employee headcount and number of electric light trucks?",
+      "category": "cross_page",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        9,
+        11,
+        10,
+        12,
+        3
+      ],
+      "retrieved_evidence_groups": 2,
+      "required_evidence_groups": 2,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 2,
+      "citation_pages": [
+        9,
+        12
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "Kirana's year-end 2025 employee headcount is not explicitly stated in the provided evidence, though a table titled 'Employees by country at year end' exists without populated data for Indonesia. The number of electric light trucks at the end of 2025 was 218.",
+      "citations": [
+        {
+          "page": 9,
+          "quote": "Our electric fleet grew from 136 vehicles at the end of 2024 to 218 at the end of 2025, an increase of 82.",
+          "source": "text",
+          "evidence_id": "P9-B7-8"
+        },
+        {
+          "page": 12,
+          "quote": "The correct figure is 82, as reported in the Fleet and sustainability section. The electric fleet was 218 vehicles at 31 December 2025.",
+          "source": "text",
+          "evidence_id": "P12-B7-8"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 9.21809999999823,
+        "ask_including_internal_retrieval": 23219.86179999658,
+        "case_total": 23229.083999998693
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K13",
+      "question": "What customer Net Promoter Score (NPS) did Kirana report for 2025 and for 2024?",
+      "category": "infographic",
+      "answerable": true,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        12,
+        3,
+        2,
+        9,
+        4
+      ],
+      "retrieved_evidence_groups": 2,
+      "required_evidence_groups": 2,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 2,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": false,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "The provided evidence does not contain the specific Customer Net Promoter Score (NPS) values for Kirana for the years 2024 and 2025. While Evidence [P3-OCR1] mentions a Customer NPS of 47 for 2024, it does not explicitly state this as a standalone fact but rather within a dense data block that may be misaligned or OCR-scanned, and no explicit value is provided for 2025. Additionally, the document contains an errata note regarding fleet numbers (correcting 96 to 82), yet no similar correction or clarification is made regarding the NPS figures. Therefore, a definitive answer cannot be constructed without inventing facts or assuming alignment between unverified data points.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 8.346100003109314,
+        "ask_including_internal_retrieval": 29425.686799993855,
+        "case_total": 29434.036200000264
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K14",
+      "question": "According to the quarterly revenue chart, what was Q4 2025 revenue in THB million?",
+      "category": "chart",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        4,
+        2,
+        11,
+        3,
+        5
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 1,
+      "citation_pages": [
+        5
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": true,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "Q4 2025 revenue was THB 1,962 million.",
+      "citations": [
+        {
+          "page": 5,
+          "quote": "Figure 1.Revenueby quarter,2025(THBmillion) 2500 2,305 2,048 2,105 1,962 2000 uo 1500 THB 1000 500 Q1 Q2 Q3 Q4",
+          "source": "rapidocr_onnxruntime",
+          "evidence_id": "P5-OCR1"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 8.395299999392591,
+        "ask_including_internal_retrieval": 16991.17750000005,
+        "case_total": 16999.57590000122
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K15",
+      "question": "Under the standard 2026 tariff, what is the cold-chain pallet storage rate per pallet per month?",
+      "category": "scanned_table",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        2,
+        13,
+        7,
+        8,
+        11
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 1,
+      "citation_pages": [
+        13
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": true,
+      "answer_strict_pass": false,
+      "grounded_strict_pass": false,
+      "answer": "Under the standard 2026 tariff, the cold-chain pallet storage rate is 1,150.00 THB per pallet per month.",
+      "citations": [
+        {
+          "page": 13,
+          "quote": "Cold-chainpalletstorage(2-8C) Frozen pallet storage (-18 C) per palletpermonth 1,150.00",
+          "source": "rapidocr_onnxruntime",
+          "evidence_id": "P13-OCR1"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 8.923900000809226,
+        "ask_including_internal_retrieval": 14112.531499995384,
+        "case_total": 14121.458200002962
+      },
+      "retrieval_diagnosis": {
+        "label": "answer_generation_miss"
+      }
+    },
+    {
+      "id": "K16",
+      "question": "What capital expenditure does Kirana plan for 2026?",
+      "category": "prose",
+      "answerable": true,
+      "status": "answered",
+      "retrieved_pages_at_k": [
+        11,
+        4,
+        1,
+        2,
+        7
+      ],
+      "retrieved_evidence_groups": 1,
+      "required_evidence_groups": 1,
+      "answer_fact_hits": 1,
+      "answer_fact_total": 1,
+      "citation_pages": [
+        11
+      ],
+      "citation_evidence_groups": 1,
+      "citation_complete": true,
+      "answer_strict_pass": true,
+      "grounded_strict_pass": true,
+      "answer": "Kirana plans capital expenditure of approximately THB 1,050 million for 2026.",
+      "citations": [
+        {
+          "page": 11,
+          "quote": "Planned capital expenditure is approximately THB 1,050 million.",
+          "source": "text",
+          "evidence_id": "P11-B8-9"
+        }
+      ],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 8.109199996397365,
+        "ask_including_internal_retrieval": 10037.546899999143,
+        "case_total": 10045.658700000786
+      },
+      "retrieval_diagnosis": {
+        "label": "pass"
+      }
+    },
+    {
+      "id": "K17",
+      "question": "Who was Kirana's Chief Financial Officer at the end of 2025?",
+      "category": "unsupported",
+      "answerable": false,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        2,
+        12,
+        4,
+        1,
+        10
+      ],
+      "retrieved_evidence_groups": 0,
+      "required_evidence_groups": 0,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 0,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": true,
+      "answer_strict_pass": null,
+      "grounded_strict_pass": true,
+      "answer": "The provided evidence does not identify Kirana's Chief Financial Officer at the end of 2025.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 7.913799992820714,
+        "ask_including_internal_retrieval": 24565.771100002166,
+        "case_total": 24573.688099997526
+      }
+    },
+    {
+      "id": "K18",
+      "question": "What percentage volume discount does Schedule C give for 500 cold-chain pallets?",
+      "category": "missing_attachment",
+      "answerable": false,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        7,
+        8,
+        13,
+        12,
+        4
+      ],
+      "retrieved_evidence_groups": 0,
+      "required_evidence_groups": 0,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 0,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": true,
+      "answer_strict_pass": null,
+      "grounded_strict_pass": true,
+      "answer": "The provided evidence does not establish the percentage volume discount Schedule C gives for 500 cold-chain pallets.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 9.59809999767458,
+        "ask_including_internal_retrieval": 15866.730000001553,
+        "case_total": 15876.330900005996
+      }
+    },
+    {
+      "id": "K19",
+      "question": "How much capital expenditure did Kirana actually incur in full-year 2026?",
+      "category": "unsupported_actual",
+      "answerable": false,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        11,
+        4,
+        12,
+        1,
+        2
+      ],
+      "retrieved_evidence_groups": 0,
+      "required_evidence_groups": 0,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 0,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": true,
+      "answer_strict_pass": null,
+      "grounded_strict_pass": true,
+      "answer": "The provided evidence does not establish the actual capital expenditure incurred by Kirana in full-year 2026. The documents only state a planned figure for 2026 (THB 1,050 million) and historical data for prior years (e.g., THB 905 million in 2024), but do not contain the actual incurred amount for 2026.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 7.353799999691546,
+        "ask_including_internal_retrieval": 18905.571799994505,
+        "case_total": 18912.927899997158
+      }
+    },
+    {
+      "id": "K20",
+      "question": "What were the names and individual revenue contributions of Kirana's ten largest customers in 2025?",
+      "category": "unsupported_detail",
+      "answerable": false,
+      "status": "abstained",
+      "retrieved_pages_at_k": [
+        11,
+        2,
+        1,
+        5,
+        3
+      ],
+      "retrieved_evidence_groups": 0,
+      "required_evidence_groups": 0,
+      "answer_fact_hits": 0,
+      "answer_fact_total": 0,
+      "citation_pages": [],
+      "citation_evidence_groups": 0,
+      "citation_complete": true,
+      "answer_strict_pass": null,
+      "grounded_strict_pass": true,
+      "answer": "The provided evidence does not contain the names or individual revenue contributions of Kirana's ten largest customers in 2025. While it states that these ten customers generated 41% of total revenue, it does not break down the specific amounts or identify which companies they are.",
+      "citations": [],
+      "mode": "ollama",
+      "diagnostics": null,
+      "timing_ms": {
+        "retrieve": 8.943699998781085,
+        "ask_including_internal_retrieval": 13863.847100001294,
+        "case_total": 13872.793499998807
+      }
+    }
+  ],
+  "retrieval_comparison": {
+    "baseline": {
+      "retrieval_recall_at_k": 0.875,
+      "all_evidence_at_k": 0.875,
+      "ndcg_at_k": 0.75568341624744
+    },
+    "structured": {
+      "retrieval_recall_at_k": 1.0,
+      "all_evidence_at_k": 1.0,
+      "ndcg_at_k": 0.8473052786155338
+    }
+  },
+  "metadata": {
+    "pdf": "C:\\Users\\miqba\\projects\\DevxLab Tech Test\\data\\Kirana_Logistics_Annual_Report_2025.pdf",
+    "pdf_sha256": "109f0c113b5d8184ff720b87d69d3d9c7c236cf3be4aff5cd02b50addea43605",
+    "gold": "C:\\Users\\miqba\\projects\\DevxLab Tech Test\\data\\a1_gold.json",
+    "gold_sha256": "f3f0b5b59b3256bd61812512d89765d3ad954b4577d9edc3df96d3f9b11d6c09",
+    "strategy": "structured",
+    "model_config": {
+      "provider": "ollama",
+      "model": "qwen3.5:4b",
+      "base_url": "http://localhost:11434",
+      "num_ctx": 3072,
+      "num_predict": 384,
+      "num_gpu": 12,
+      "timeout": 120
+    },
+    "ocr_visuals_requested": true,
+    "page_count_inferred": 13,
+    "coverage_summary": {
+      "page_count": 13,
+      "pages_with_evidence": 13,
+      "pages_without_evidence": [],
+      "page_status_counts": {
+        "text_plus_ocr_visuals_unverified": 7,
+        "text_extracted": 6
+      }
+    },
+    "coverage_report": {
+      "pdf": "C:\\Users\\miqba\\projects\\DevxLab Tech Test\\data\\Kirana_Logistics_Annual_Report_2025.pdf",
+      "page_count": 13,
+      "pages_with_evidence": 13,
+      "pages_without_evidence": [],
+      "pages": [
+        {
+          "page": 1,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 374,
+          "image_count": 1,
+          "visual_area_ratio": 0.289,
+          "ocr_error": null,
+          "unit_count": 5
+        },
+        {
+          "page": 2,
+          "status": "text_extracted",
+          "body_chars": 1230,
+          "image_count": 0,
+          "visual_area_ratio": 0.0,
+          "ocr_error": null,
+          "unit_count": 9
+        },
+        {
+          "page": 3,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 71,
+          "image_count": 1,
+          "visual_area_ratio": 0.302,
+          "ocr_error": null,
+          "unit_count": 3
+        },
+        {
+          "page": 4,
+          "status": "text_extracted",
+          "body_chars": 779,
+          "image_count": 0,
+          "visual_area_ratio": 0.0,
+          "ocr_error": null,
+          "unit_count": 12
+        },
+        {
+          "page": 5,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 275,
+          "image_count": 2,
+          "visual_area_ratio": 0.371,
+          "ocr_error": null,
+          "unit_count": 5
+        },
+        {
+          "page": 6,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 587,
+          "image_count": 1,
+          "visual_area_ratio": 0.224,
+          "ocr_error": null,
+          "unit_count": 5
+        },
+        {
+          "page": 7,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 1575,
+          "image_count": 1,
+          "visual_area_ratio": 0.229,
+          "ocr_error": null,
+          "unit_count": 19
+        },
+        {
+          "page": 8,
+          "status": "text_extracted",
+          "body_chars": 770,
+          "image_count": 0,
+          "visual_area_ratio": 0.0,
+          "ocr_error": null,
+          "unit_count": 15
+        },
+        {
+          "page": 9,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 852,
+          "image_count": 1,
+          "visual_area_ratio": 0.166,
+          "ocr_error": null,
+          "unit_count": 15
+        },
+        {
+          "page": 10,
+          "status": "text_extracted",
+          "body_chars": 546,
+          "image_count": 0,
+          "visual_area_ratio": 0.0,
+          "ocr_error": null,
+          "unit_count": 10
+        },
+        {
+          "page": 11,
+          "status": "text_extracted",
+          "body_chars": 1054,
+          "image_count": 0,
+          "visual_area_ratio": 0.0,
+          "ocr_error": null,
+          "unit_count": 13
+        },
+        {
+          "page": 12,
+          "status": "text_extracted",
+          "body_chars": 554,
+          "image_count": 0,
+          "visual_area_ratio": 0.0,
+          "ocr_error": null,
+          "unit_count": 8
+        },
+        {
+          "page": 13,
+          "status": "text_plus_ocr_visuals_unverified",
+          "body_chars": 0,
+          "image_count": 1,
+          "visual_area_ratio": 0.686,
+          "ocr_error": null,
+          "unit_count": 1
+        }
+      ]
+    },
+    "answer_matching": "case-insensitive token-bounded aliases; lexical proxy only",
+    "citation_matching": "citation page IDs checked against human gold pages; quote entailment not automated"
+  }
+}

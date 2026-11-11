@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kirana-qa"
+version = "0.1.0"
+description = "Local, citation-grounded question answering for PDF reports"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["PyMuPDF>=2.1"]
+
+[project.optional-dependencies]
+ocr = ["rapidocr-onnxruntime>=1.3.24"]
+
+[project.scripts]
+kirana-qa = "kirana_qa.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["kirana_qa"]

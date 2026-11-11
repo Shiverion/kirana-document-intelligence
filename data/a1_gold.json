@@ -1,0 +1,467 @@
+[
+  {
+    "id": "K01",
+    "question": "What was Kirana's total revenue for 2025, and in what currency is it reported?",
+    "category": "prose",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "total_revenue",
+        "aliases": [
+          "8,420 million",
+          "8420 million",
+          "8,420m",
+          "8.42 billion",
+          "8,420,000,000",
+          "8,420 m"
+        ],
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "currency",
+        "aliases": [
+          "THB",
+          "Thai baht",
+          "baht"
+        ],
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "notes": "Expected THB 8,420 million. CEO letter, at-a-glance card and financial summary each support the answer."
+  },
+  {
+    "id": "K02",
+    "question": "What disruption caused Kirana's on-time delivery to dip in Q4 2025, and how did it affect the main southern highway?",
+    "category": "prose",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "flooding_in_southern_thailand",
+        "aliases": [
+          "flooding in southern Thailand",
+          "southern Thailand flooding",
+          "severe flooding in southern Thailand",
+          "floods in southern Thailand",
+          "southern Thai flooding",
+          "southern Thailand floods"
+        ],
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "highway_closed",
+        "aliases": [
+          "closed sections of the main southern highway",
+          "closure of the main southern highway",
+          "southern highway closures",
+          "highway closure",
+          "highway closures",
+          "highway closed",
+          "closed sections of the southern highway"
+        ],
+        "pages": [
+          6
+        ]
+      }
+    ],
+    "notes": "Expected flooding in southern Thailand closed sections of the main southern highway. The operations section explicitly links it to the OTD dip."
+  },
+  {
+    "id": "K03",
+    "question": "How many parcels did Kirana deliver in 2025?",
+    "category": "prose",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "parcels_delivered",
+        "aliases": [
+          "41.6 million",
+          "41.6m",
+          "41,600,000",
+          "41 600 000"
+        ],
+        "pages": [
+          3,
+          6
+        ]
+      }
+    ],
+    "notes": "Expected 41.6 million parcels. The p3 KPI card and p6 operations section both support it."
+  },
+  {
+    "id": "K04",
+    "question": "What was EBITDA in 2024 according to the financial summary?",
+    "category": "table",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "ebitda_2024",
+        "aliases": [
+          "1,186 million",
+          "1186 million",
+          "1,186",
+          "1186",
+          "1.186 billion"
+        ],
+        "pages": [
+          4
+        ]
+      }
+    ],
+    "notes": "Expected THB 1,186 million. Verify the 2024 column; 1,036 and 1,347 are for 2023 and 2025."
+  },
+  {
+    "id": "K05",
+    "question": "How much capital expenditure did Kirana report for 2025?",
+    "category": "table",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "capex_2025",
+        "aliases": [
+          "905 million",
+          "905m",
+          "905,000,000",
+          "905"
+        ],
+        "pages": [
+          4
+        ]
+      }
+    ],
+    "notes": "Expected THB 905 million. The THB 1,050 million figure on p11 is a 2026 plan."
+  },
+  {
+    "id": "K06",
+    "question": "What was the 2025 utilisation rate at the Cibitung cold-chain facility in Bekasi?",
+    "category": "table",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "cibitung_utilisation",
+        "aliases": [
+          "96%",
+          "96 percent",
+          "96 per cent"
+        ],
+        "pages": [
+          8
+        ]
+      }
+    ],
+    "notes": "Expected 96%, row ID-CBT in the continuation of Table 2. Page 7 mentions Cibitung qualitatively but gives no percentage."
+  },
+  {
+    "id": "K07",
+    "question": "What was Da Nang's 2025 warehouse utilisation, and what is the company's rule for putting a site on the consolidation watch list?",
+    "category": "cross_page",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "da_nang_utilisation",
+        "aliases": [
+          "62%",
+          "62 percent",
+          "62 per cent"
+        ],
+        "pages": [
+          8
+        ]
+      },
+      {
+        "id": "threshold",
+        "aliases": [
+          "below 65%",
+          "under 65%",
+          "less than 65%",
+          "below 65 percent",
+          "under 65 percent",
+          "less than 65 percent",
+          "<65%"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "duration",
+        "aliases": [
+          "two consecutive quarters",
+          "2 consecutive quarters",
+          "two quarters in a row",
+          "2 quarters in a row",
+          "two successive quarters"
+        ],
+        "pages": [
+          7
+        ]
+      }
+    ],
+    "notes": "Expected 62% on p8, and below 65% for two consecutive quarters on p7. The annual rate alone cannot establish placement on the watch list."
+  },
+  {
+    "id": "K08",
+    "question": "How many electric light trucks were in Kirana's Indonesian fleet at the end of 2025?",
+    "category": "table",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "indonesia_electric_light_trucks",
+        "aliases": [
+          "44"
+        ],
+        "pages": [
+          9
+        ]
+      }
+    ],
+    "notes": "Expected 44. Use the Indonesia column, not fleet-wide 218."
+  },
+  {
+    "id": "K09",
+    "question": "The CEO letter and the errata give different figures for electric trucks added in 2025. What was the original figure, and which corrected number should an analyst use?",
+    "category": "errata",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "original_count",
+        "aliases": [
+          "96"
+        ],
+        "pages": [
+          2,
+          12
+        ]
+      },
+      {
+        "id": "corrected_count",
+        "aliases": [
+          "82"
+        ],
+        "pages": [
+          9,
+          12
+        ]
+      },
+      {
+        "id": "correction_precedence",
+        "aliases": [
+          "errata",
+          "correct figure",
+          "corrected",
+          "correction",
+          "supersedes",
+          "revised",
+          "correct number",
+          "correct count",
+          "correct value",
+          "should use",
+          "should be used"
+        ],
+        "pages": [
+          12
+        ]
+      }
+    ],
+    "notes": "Expected the CEO letter's 96 is superseded by 82 per the errata. Page 9 corroborates 82. Audit polarity manually; the lexical scorer cannot detect swapped roles."
+  },
+  {
+    "id": "K10",
+    "question": "What were Kirana's Scope 2 greenhouse gas emissions in 2025?",
+    "category": "table",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "scope_2_2025",
+        "aliases": [
+          "12,100",
+          "12100",
+          "12 100"
+        ],
+        "pages": [
+          9
+        ]
+      }
+    ],
+    "notes": "Expected 12,100 tCO2e from Table 4. Check that the answer retains Scope 2, 2025, and the reported unit."
+  },
+  {
+    "id": "K11",
+    "question": "What does FTL stand for in this report?",
+    "category": "glossary",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "ftl_definition",
+        "aliases": [
+          "full truckload",
+          "full truck load"
+        ],
+        "pages": [
+          12
+        ]
+      }
+    ],
+    "notes": "Expected full truckload per Appendix A."
+  },
+  {
+    "id": "K12",
+    "question": "For Indonesia, what were Kirana's year-end 2025 employee headcount and number of electric light trucks?",
+    "category": "cross_page",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "employees_indonesia",
+        "aliases": [
+          "2,240",
+          "2240",
+          "2 240"
+        ],
+        "pages": [
+          10
+        ]
+      },
+      {
+        "id": "indonesia_electric_light_trucks",
+        "aliases": [
+          "44"
+        ],
+        "pages": [
+          9
+        ]
+      }
+    ],
+    "notes": "Expected 2,240 employees on p10 and 44 electric light trucks on p9."
+  },
+  {
+    "id": "K13",
+    "question": "What customer Net Promoter Score (NPS) did Kirana report for 2025 and for 2024?",
+    "category": "infographic",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "nps_2025",
+        "aliases": [
+          "52"
+        ],
+        "pages": [
+          3
+        ]
+      },
+      {
+        "id": "nps_2024",
+        "aliases": [
+          "47"
+        ],
+        "pages": [
+          3
+        ]
+      }
+    ],
+    "notes": "Expected 52 for 2025 and 47 for 2024. Visually verified on the customer NPS KPI card. The glossary does not give scores."
+  },
+  {
+    "id": "K14",
+    "question": "According to the quarterly revenue chart, what was Q4 2025 revenue in THB million?",
+    "category": "chart",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "q4_revenue",
+        "aliases": [
+          "2,305",
+          "2305",
+          "2 305",
+          "2.305 billion"
+        ],
+        "pages": [
+          5
+        ]
+      }
+    ],
+    "notes": "Expected THB 2,305 million. Visually verified using the Q4 bar and label in Figure 1; nearby prose gives the strongest quarter but not the amount."
+  },
+  {
+    "id": "K15",
+    "question": "Under the standard 2026 tariff, what is the cold-chain pallet storage rate per pallet per month?",
+    "category": "scanned_table",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "cold_chain_monthly_rate",
+        "aliases": [
+          "780",
+          "780.00"
+        ],
+        "pages": [
+          13
+        ]
+      }
+    ],
+    "notes": "Expected THB 780 per pallet per month, excluding VAT. Visually verified against the cold-chain (2–8 C) row in scanned Appendix B. Ambient and frozen storage are distractors."
+  },
+  {
+    "id": "K16",
+    "question": "What capital expenditure does Kirana plan for 2026?",
+    "category": "prose",
+    "answerable": true,
+    "required_facts": [
+      {
+        "id": "planned_capex_2026",
+        "aliases": [
+          "1,050 million",
+          "1050 million",
+          "1,050",
+          "1050",
+          "1.05 billion",
+          "1,050,000,000"
+        ],
+        "pages": [
+          11
+        ]
+      }
+    ],
+    "notes": "Expected approximately THB 1,050 million planned, distinct from actual 2025 capex on p4."
+  },
+  {
+    "id": "K17",
+    "question": "Who was Kirana's Chief Financial Officer at the end of 2025?",
+    "category": "unsupported",
+    "answerable": false,
+    "required_facts": [],
+    "notes": "The CEO is identified on p2. The report does not name a CFO."
+  },
+  {
+    "id": "K18",
+    "question": "What percentage volume discount does Schedule C give for 500 cold-chain pallets?",
+    "category": "missing_attachment",
+    "answerable": false,
+    "required_facts": [],
+    "notes": "Scanned p13 says volume discounts are in Schedule C, which is not included. The THB 780 base rate cannot answer the discount question."
+  },
+  {
+    "id": "K19",
+    "question": "How much capital expenditure did Kirana actually incur in full-year 2026?",
+    "category": "unsupported_actual",
+    "answerable": false,
+    "required_facts": [],
+    "notes": "Page 11 gives a plan for 2026 and p4 gives actuals through 2025. Full-year 2026 actuals are absent."
+  },
+  {
+    "id": "K20",
+    "question": "What were the names and individual revenue contributions of Kirana's ten largest customers in 2025?",
+    "category": "unsupported_detail",
+    "answerable": false,
+    "required_facts": [],
+    "notes": "Page 11 discloses only the group's aggregate 41% concentration. It does not identify the customers or their individual revenue."
+  }
+]
